@@ -20,7 +20,7 @@ abstract class Conta {
      * @param $saldo Saldo da conta
      * @param $cancelada Estado da conta (cancelada ou ativa)
      */
-    function __construct($agencia, $codigo, $dataDeCriacao, $titular, $senha, $saldo, $cancelada){
+    public function __construct($agencia, $codigo, $dataDeCriacao, $titular, $senha, $saldo, $cancelada){
         $this->agencia = $agencia;
         $this->codigo = $codigo;
         $this->dataDeCriacao = $dataDeCriacao;
@@ -31,10 +31,10 @@ abstract class Conta {
     }
     
     /**
-     * Imprime todos os atributos
+     * Retorna uma string (obrigatoriamente) com informações da conta
      */
-    function __toString() {
-        echo 'Agencia: ' . $this->agencia . '<br>' .
+    public function __toString() {
+        return 'Agencia: ' . $this->agencia . '<br>' .
             'Código: ' . $this->codigo . '<br>' . 
             'Data de criação: ' . $this->dataDeCriacao . '<br>' .
             'Titular: ' . $this->titular . '<br>' .
@@ -42,19 +42,19 @@ abstract class Conta {
             'Saldo: ' . $this->saldo . '<br>' .
             'Cancelada: ' . $this->cancelada . '<br>';
     }
-
+  
     
     /**
      * Retira o valor passado do saldo
      * @param $valor Valor passado
      */
-    abstract function Retirar($valor);
+    abstract public function Retirar($valor);
     
     /**
      * Deposita o valor passado no saldo
      * @param $valor Valor passado
      */
-    function Depositar($valor){
+    public function Depositar($valor){
         if($valor > 0){
             $this->saldo += $valor;
         } else {
@@ -66,7 +66,7 @@ abstract class Conta {
      * Retorna o saldo da conta
      * @return float|int Saldo da conta
      */
-    function ObterSaldo(){
+    public function ObterSaldo(){
         return $this->saldo;
     }
 }
