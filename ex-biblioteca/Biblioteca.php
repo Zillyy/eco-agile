@@ -5,11 +5,14 @@ class Biblioteca {
     private $arrayDeLivros;
     
     function __construct($arrayDeLivros) {
-        $this->arrayDeLivros = $arrayDeLivros;
+        if(is_array($arrayDeLivros)){
+            $this->arrayDeLivros = $arrayDeLivros;
+        }
     }
 
     function LivrosDisponiveis(){
         $livrosDisponiveis = 'Livros disponíveis:<br>';
+        
         foreach($this->arrayDeLivros as $livro){
             $livrosDisponiveis .= '- ' . $livro->getTitulo() . '<br>';
         }
@@ -28,6 +31,5 @@ class Biblioteca {
                 return $retirado;
             }
         }
-        return false;
     }
 }

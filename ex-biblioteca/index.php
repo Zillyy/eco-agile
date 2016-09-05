@@ -39,7 +39,7 @@ and open the template in the editor.
             "joaoemaria" => $joaoMaria,
             "gatoDeBotas" => $gatoDeBotas
         ];
-        
+                
         //Instância da Biblioteca e do Aluno
         $biblioteca = new Biblioteca($array);
         $aluno = new Aluno('Zilly', 1029384756, '(00)1234-5678');
@@ -50,11 +50,23 @@ and open the template in the editor.
         $biblioteca->AdicionaLivro($patinhoFeio);
         
         echo $biblioteca->LivrosDisponiveis();
+        
         echo '<br>';
+        
         $aluno->PegaLivro($biblioteca->RetiraLivro('Branca de Neve'));
+        
         echo $biblioteca->LivrosDisponiveis();
+        
         echo '<br>';
+        
         echo $aluno->getLivro()->getTitulo();
+        
+        $livroAluno = $aluno->getLivro();
+        echo $livroAluno->getTitulo();
+        
+        $biblioteca->AdicionaLivro($aluno->DevolveLivro());
+        
+        echo $biblioteca->LivrosDisponiveis();
         ?>
     </body>
 </html>

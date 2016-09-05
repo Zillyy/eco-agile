@@ -46,7 +46,7 @@ class Aluno {
         $this->livro = $livro;
     }
 
-    function DevolverLivro() {
+    function DevolveLivro() {
         $livro = $this->livro;
         $this->livro = null;
         return $livro;
