@@ -43,7 +43,6 @@ abstract class Conta {
             'Cancelada: ' . $this->cancelada . '<br>';
     }
   
-    
     /**
      * Retira o valor passado do saldo
      * @param $valor Valor passado
