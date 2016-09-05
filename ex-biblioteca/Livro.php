@@ -43,7 +43,7 @@ class Livro {
     }
 
     function setSituacao($situacao) {
-        echo 'tchau';
+        $this->situacao = $situacao;
     }
 
 }
