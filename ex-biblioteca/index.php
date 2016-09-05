@@ -57,16 +57,6 @@ and open the template in the editor.
         
         echo $biblioteca->LivrosDisponiveis();
         
-        echo '<br>';
-        
-        echo $aluno->getLivro()->getTitulo();
-        
-        $livroAluno = $aluno->getLivro();
-        echo $livroAluno->getTitulo();
-        
-        $biblioteca->AdicionaLivro($aluno->DevolveLivro());
-        
-        echo $biblioteca->LivrosDisponiveis();
         ?>
     </body>
 </html>
