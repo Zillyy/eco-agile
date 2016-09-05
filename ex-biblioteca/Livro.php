@@ -38,8 +38,8 @@ class Livro {
         $this->autor = $autor;
     }
 
-    function setNumPaginas($numPaginas) {
-        $this->numPaginas = $numPaginas;
+    function setNumPaginas() {
+        $this->numPaginas = 25;
     }
 
     function setSituacao($situacao) {
