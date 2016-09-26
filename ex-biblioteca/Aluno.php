@@ -2,18 +2,24 @@
 
 class Aluno {
 
+    private $id;
     private $nome;
     private $matricula;
     private $telefone;
     private $livro;
 
-    function __construct($nome, $matricula, $telefone, $livro = null) {
+    function __construct($id, $nome, $matricula, $telefone, $livro = null) {
+        $this->id = $id;
         $this->nome = $nome;
         $this->matricula = $matricula;
         $this->telefone = $telefone;
         $this->livro = $livro;
     }
 
+    function getId() {
+        return $this->id;
+    }
+    
     function getNome() {
         return $this->nome;
     }
@@ -30,6 +36,10 @@ class Aluno {
         return $this->livro;
     }
 
+    function setId($id) {
+        $this->id = $id;
+    }
+    
     function setNome($nome) {
         $this->nome = $nome;
     }
