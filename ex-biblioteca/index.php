@@ -22,6 +22,7 @@ and open the template in the editor.
          *  - Atributos são todos private. Criar Getters, Setters e Construtores.
          */
         
+        //Includes de classes
         include_once 'Aluno.php';
         include_once 'Livro.php';
         include_once 'Biblioteca.php';
@@ -35,7 +36,6 @@ and open the template in the editor.
             echo 'Nome: ' . $aluno->getNome() . '</br>';
         }
         
-        echo '</br>';
         echo '</br>';
         
         $matricula = '1234567890';

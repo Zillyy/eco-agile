@@ -8,7 +8,7 @@ class Aluno {
     private $telefone;
     private $livro;
 
-    function __construct($id, $nome, $matricula, $telefone, $livro = null) {
+    function __construct($id = null, $nome = null, $matricula = null, $telefone = null, $livro = null) {
         $this->id = $id;
         $this->nome = $nome;
         $this->matricula = $matricula;
