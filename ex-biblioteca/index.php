@@ -33,7 +33,8 @@ and open the template in the editor.
         $arrayAlunos = $alunoDao->selecionarTodos();
         
         foreach($arrayAlunos as $aluno){
-            echo 'Nome: ' . $aluno->getNome() . '</br>';
+            $livroDoAluno = $aluno->getLivro();
+            echo 'Nome: ' . $aluno->getNome() . ' - ' . $livroDoAluno->getTitulo() . ' - ' . $livroDoAluno->getAutor() .'</br>';
         }
         
         echo '</br>';
@@ -42,7 +43,11 @@ and open the template in the editor.
         
         $joaozinho = $alunoDao->selecionarPorMatricula($matricula);
         if($joaozinho){
-            echo 'Nome: ' . $joaozinho->getNome();
+            $livroDoJoaozinho = $joaozinho->getLivro();
+            echo 'Nome: ' . $joaozinho->getNome() . '<br>';
+            echo 'Livro: ' . $livroDoJoaozinho->getTitulo() . '<br>';
+            echo 'Número de páginas do livro: ' . $livroDoJoaozinho->getNumPaginas();
+            
         } else {
             echo 'Consulta por matrícula ' . $matricula . ' falhou!';
         }
