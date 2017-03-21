@@ -39,5 +39,6 @@ class ContaPoupanca extends Conta{
             $this->saldo -= $valor;
             return true;
         }
+        echo "teste commit";
     }
 }
